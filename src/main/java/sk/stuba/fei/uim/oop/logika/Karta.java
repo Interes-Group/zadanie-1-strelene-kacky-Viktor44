@@ -1,5 +1,6 @@
 package sk.stuba.fei.uim.oop.logika;
 
+//----------------Tato triade je parent trieda pre osztane triedy ktore su na karty-----------------
 public class Karta {
     protected int index;
     private int typ;

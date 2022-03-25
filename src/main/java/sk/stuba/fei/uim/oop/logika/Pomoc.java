@@ -2,6 +2,7 @@ package sk.stuba.fei.uim.oop.logika;
 
 import java.util.*;
 
+//------------V tomto triede mam tie metody ktore budem pouzivat viac krat-------------
 public class Pomoc {
 
     public Karta[] zamiesat(Karta[] kopka){

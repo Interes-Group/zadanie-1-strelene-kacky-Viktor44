@@ -1,5 +1,6 @@
 package sk.stuba.fei.uim.oop.logika;
 
+//-----------Tato trieda je pre jedneho hraca kde bude mat hrac vsetky dolezite informacie---------------------
 public class Hrac {
     private int cislo;
     private String meno;

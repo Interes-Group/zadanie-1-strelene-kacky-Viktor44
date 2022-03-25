@@ -10,6 +10,7 @@ import sk.stuba.fei.uim.oop.pohyby.Tanec;
 import sk.stuba.fei.uim.oop.pohyby.Turbo;
 import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 
+//-------------V tomto triede budem mat metodu co spustim v main----------
 public class Hra {
     public Random rnd = new Random();
     public Karta[] rybnicek = new Karta[6];
@@ -46,12 +47,12 @@ public class Hra {
         boolean vystrelenaKacka = true;
         Hra vyber;
 
-
+//---------------Zadanie mena hracov------------------
         for (i=0; i<pocetHracov;i++) {
             str = ZKlavesnice.readString("Zadate meno hraca " + (i + 1) + ": ");
             hrace[i] = new Hrac((i + 1), str);
         }
-
+//--------------Zostavtim balíček kariet kde budu akcie---------- kopka = balicek
         for (i = 0; i<34;i++){
             if (i<10){
                 kopkaAkcie[i] = new Zamerenie(1,1);
@@ -75,6 +76,7 @@ public class Hra {
                 kopkaAkcie[i] = new Tanec(1,7);
             }
         }
+        //-------------zamiesam balicek-------------
         kopkaAkcie = help.zamiesat(kopkaAkcie);
 
 
@@ -84,7 +86,7 @@ public class Hra {
                 this.poradieAkcie++;
             }
         }
-
+//--------------Zostavtim balíček kde budem mat vodu a kacky----------
         for (i = 0 ; i<=pocetHracov;i++){
             for (int l = 0 ; l <5;l++) {
                 kopkaJazero[this.poradieJazero] = new Karta(2,i);
@@ -94,15 +96,16 @@ public class Hra {
         }
         this.poradieJazero = 0;
 
+//--------------zamiesam balicek ------------------
         kopkaJazero = help.zamiesat(kopkaJazero);
-
+//--------------pridam kacky na rybnicek----------
         for (i = 0;i<6;i++){
             this.rybnicek[i] = kopkaJazero[this.poradieJazero];
             this.zamer[i] = false;
             this.poradieJazero++;
         }
 
-
+//--------------Hlavny cyklus------------------
         while (1 == 1){
 
             System.out.print("\n \n");
